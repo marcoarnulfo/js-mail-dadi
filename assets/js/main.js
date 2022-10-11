@@ -8,42 +8,32 @@ console.log("hello");
 // commento esercizio uno MOMENTANEO
 
 
-const mailUser = prompt("Benvenuto, inserisci email")
+let mailUser = prompt("Benvenuto, inserisci email")
 //console.log(mailUser);
 const usersMail = ['pinco.pallo@gmail.com', 'pallo.pinco@gmail.com', 'mario.rossi@gmail.com']
 //console.log(usersMail);
-const advice = document.querySelector("h1")
+let advice = document.querySelector("h1")
 
-// esercizio email senza for
 
-if (mailUser === usersMail[0]) {
-    console.log("Accesso eseguito");
-    advice.innerHTML = "Benvenuto Pinco Pallo =)"
-} else if (mailUser === usersMail[1]) {
-    console.log("Accessi eseguito");
-    advice.innerHTML = "Benvenuto Pallo Pinco =)"
-} else if (mailUser === usersMail[2]) {
-    console.log("Accessi eseguito");
-    advice.innerHTML = "Benvenuto Mario Rossi =)"
-} else {
-    console.log("Accessi Negato");
-    advice.innerHTML = "Accesso Negato =("
-}
 
 
 // Esercizio email con for
 
-// for (let index = 0; index < usersMail.length; index++) {
-//     const element = usersMail[index];
-//     if (mailUser === element) {
-//         console.log("Accesso eseguito");
-//         advice.innerHTML = "Benvenuto =)"
-//         break
-//     } else {
-//         console.log("Accesso negato");
-//         advice.innerHTML = "Accesso negato =("
-//     }
-// }
+
+let isValid = false;
+
+for (let index = 0; index < usersMail.length; index++) {
+    const element = usersMail[index];
+    if (mailUser == element) {
+        isValid = true;
+    } 
+}
+
+if (isValid === true){
+    isValid = advice.innerHTML = "Benvenuto =)"
+} else {
+    isValid = advice.innerHTML = "Accesso negato =("
+}
 
 
 
@@ -51,22 +41,22 @@ if (mailUser === usersMail[0]) {
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. 
 //Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-const winner = document.querySelector("h2")
+let winner = document.querySelector("h2")
 
-const userNumber = Math.round(Math.random() * 6 + 1)
+const userNumber = Math.round(Math.random() * 5 + 1)
 console.log(userNumber, "Numero utente");
-const computerNumber = Math.round(Math.random() * 6 + 1)
+const computerNumber = Math.round(Math.random() * 5 + 1)
 console.log(computerNumber, "Numero Computer");
 
 if (userNumber > computerNumber) {
     console.log("Utente, hai vinto!");
     winner.innerHTML = "hai vinto! =)" + "  " + userNumber + " > " + computerNumber
-} else if(userNumber === computerNumber) {
+} else if (userNumber === computerNumber) {
     console.log("Pareggio!")
-    winner.innerHTML = "Pareggio!"  + " " + userNumber + " = " + computerNumber
+    winner.innerHTML = "Pareggio!" + " " + userNumber + " = " + computerNumber
 } else {
-    console.log("Ha vinto il computer!")
-    winner.innerHTML = "Ha vinto il computer! =("  + " " + userNumber + " < " + computerNumber
-} 
+    console.log("vincitore");
+    winner.innerHTML = "Ha vinto il computer! =(" + " " + userNumber + " < " + computerNumber
+}
 
 
