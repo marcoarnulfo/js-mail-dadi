@@ -9,22 +9,16 @@ console.log("hello");
 
 
 let mailUser = prompt("Benvenuto, inserisci email")
-//console.log(mailUser);
+
 const usersMail = ['pinco.pallo@gmail.com', 'pallo.pinco@gmail.com', 'mario.rossi@gmail.com']
-//console.log(usersMail);
+
 let advice = document.querySelector("h1")
 
-
-
-
-// Esercizio email con for
-
-
-let isValid = false;
+let isValid = false 
 
 for (let index = 0; index < usersMail.length; index++) {
     const element = usersMail[index];
-    if (mailUser == element) {
+    if (mailUser === element) {
         isValid = true;
     } 
 }
@@ -34,7 +28,6 @@ if (isValid === true){
 } else {
     isValid = advice.innerHTML = "Accesso negato =("
 }
-
 
 
 //  Gioco dei dadi
