@@ -1,11 +1,11 @@
 console.log("hello");
 
-    //Mail
- //Chiedi all’utente la sua email, (prompt)
- //controlla che sia nella lista di chi può accedere, array con più email [array]
- //stampa un messaggio appropriato sull’esito del controllo. 
+//Mail
+//Chiedi all’utente la sua email, (prompt)
+//controlla che sia nella lista di chi può accedere, array con più email [array]
+//stampa un messaggio appropriato sull’esito del controllo. 
 
-  // commento esercizio uno MOMENTANEO
+// commento esercizio uno MOMENTANEO
 
 
 const mailUser = prompt("Benvenuto, inserisci email")
@@ -14,19 +14,36 @@ const usersMail = ['pinco.pallo@gmail.com', 'pallo.pinco@gmail.com', 'mario.ross
 //console.log(usersMail);
 const advice = document.querySelector("h1")
 
-if(mailUser === usersMail[0]){
+// esercizio email senza for
+
+if (mailUser === usersMail[0]) {
     console.log("Accesso eseguito");
     advice.innerHTML = "Benvenuto Pinco Pallo =)"
-} else if(mailUser === usersMail[1]){
+} else if (mailUser === usersMail[1]) {
     console.log("Accessi eseguito");
     advice.innerHTML = "Benvenuto Pallo Pinco =)"
-} else if(mailUser === usersMail[2]){
+} else if (mailUser === usersMail[2]) {
     console.log("Accessi eseguito");
     advice.innerHTML = "Benvenuto Mario Rossi =)"
 } else {
     console.log("Accessi Negato");
     advice.innerHTML = "Accesso Negato =("
 }
+
+// Esercizio email con for
+
+// for (let index = 0; index < usersMail.length; index++) {
+//     const element = usersMail[index];
+//     if (mailUser === element) {
+//         console.log("Accesso eseguito");
+//         advice.innerHTML = "Benvenuto =)"
+//         break
+//     } else {
+//         console.log("Accesso negato");
+//         advice.innerHTML = "Accesso negato =("
+//     }
+// }
+
 
 
 //  Gioco dei dadi
@@ -40,10 +57,10 @@ console.log(userNumber, "Numero utente");
 const computerNumber = Math.round(Math.random() * 6 + 1)
 console.log(computerNumber, "Numero Computer");
 
-if(userNumber > computerNumber){
+if (userNumber > computerNumber) {
     console.log("Utente, hai vinto!");
-    winner.innerHTML = "Utente, hai vinto! =)"
-} else{
+    winner.innerHTML = "hai vinto! =)"
+} else {
     console.log("Ha vinto il computer!")
     winner.innerHTML = "Ha vinto il computer! =("
 }
