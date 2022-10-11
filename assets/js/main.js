@@ -6,7 +6,7 @@ console.log("hello");
  //stampa un messaggio appropriato sull’esito del controllo. 
 
   // commento esercizio uno MOMENTANEO
-/*
+
 
 const mailUser = prompt("Benvenuto, inserisci email")
 //console.log(mailUser);
@@ -27,7 +27,7 @@ if(mailUser === usersMail[0]){
     console.log("Accessi Negato");
     advice.innerHTML = "Accesso Negato =("
 }
- */
+
 
 //  Gioco dei dadi
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. 
