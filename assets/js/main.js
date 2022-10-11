@@ -30,6 +30,7 @@ if (mailUser === usersMail[0]) {
     advice.innerHTML = "Accesso Negato =("
 }
 
+
 // Esercizio email con for
 
 // for (let index = 0; index < usersMail.length; index++) {
@@ -59,11 +60,13 @@ console.log(computerNumber, "Numero Computer");
 
 if (userNumber > computerNumber) {
     console.log("Utente, hai vinto!");
-    winner.innerHTML = "hai vinto! =)"
+    winner.innerHTML = "hai vinto! =)" + "  " + userNumber + " > " + computerNumber
+} else if(userNumber === computerNumber) {
+    console.log("Pareggio!")
+    winner.innerHTML = "Pareggio!"  + " " + userNumber + " = " + computerNumber
 } else {
     console.log("Ha vinto il computer!")
-    winner.innerHTML = "Ha vinto il computer! =("
-}
-
+    winner.innerHTML = "Ha vinto il computer! =("  + " " + userNumber + " < " + computerNumber
+} 
 
 
